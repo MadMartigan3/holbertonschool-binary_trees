@@ -9,19 +9,20 @@
 */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-    binary_tree_t *node = malloc(sizeof(*node));
-    if (node == NULL)
+    binary_tree_t *newnode = malloc(sizeof(*newnode));
+    
+    if (newnode == NULL)
     {
-        printf(stderr, "Erreur allocation de memoire");
+        fprintf(stderr, "Erreur allocation de memoire.\n");
         exit(EXIT_FAILURE);
     }
 
-    node->n = value;
-    node->left = NULL;
-    node->right = NULL;
-    node->parent = NULL;
+    newnode->n = value;
+    newnode->left = NULL;
+    newnode->right = NULL;
+    newnode->parent = NULL;
 
-    printf(" création de node %d", node->n);
+    printf("création de node %d", newnode->n);
 
-    return(node);
+    return newnode;
 }
