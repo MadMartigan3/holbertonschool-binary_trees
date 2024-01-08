@@ -1,6 +1,6 @@
 #include "binary_trees.h"
-#include <stdlib.h>
-#include <stdio.h>
+
+
 /**
  * binary_tree_node - function that creates a binary tree node
  * @node: node create
