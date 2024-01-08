@@ -22,7 +22,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
     newnode->right = NULL;
     newnode->parent = parent;
 
-    printf("création de node %d", newnode->n);
+    // printf("création de node %d", newnode->n);
 
     return newnode;
 }
