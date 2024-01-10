@@ -1,20 +1,24 @@
 #include "binary_trees.h"
-
+/**
+ * binary_tree_sibling - function that finds the sibling of a node
+ * @node: node to check
+ * Return: result otehewise NULL
+*/
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-    if (node == NULL || node->parent == NULL)
-    {
-        return (NULL); // Le nœud ou son parent n'existe pas
-    }
+	if (node == NULL || node->parent == NULL)
+	{
+		return (NULL);
+	}
 
-    if (node->parent->left == node)
-    {
-        return (node->parent->right); // Le frère est à droite
-    }
-    else if (node->parent->right == node)
-    {
-        return (node->parent->left); // Le frère est à gauche
-    }
+	if (node->parent->left == node)
+	{
+		return (node->parent->right);
+	}
+	else if (node->parent->right == node)
+	{
+		return (node->parent->left);
+	}
 
-    return (NULL); // Si le nœud n'a pas de frère
+	return (NULL);
 }
